@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+
+body,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Corben', cursive;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #5e1914;
+}
+
+.logo-container,
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.nav-btn {
+  border: none;
+  background-color: #ff908b;
+  color: #ec1703;
+  font-size: 18px;
+  font-weight: 1000;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+}
