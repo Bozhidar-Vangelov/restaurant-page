@@ -1,6 +1,9 @@
+import { basePage } from './basePage.js';
+
 export const createHomePage = () => {
-  const homePage = document.createElement('div');
-  homePage.textContent = 'Home';
+  const headingText = 'A magic factory for healthy food';
+  const initialDisplayStyle = 'flex';
+  const homePage = basePage(headingText, initialDisplayStyle);
 
   return homePage;
 };

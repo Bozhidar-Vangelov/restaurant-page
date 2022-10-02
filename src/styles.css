@@ -2,9 +2,11 @@
 
 body,
 button {
+  background-color: rgb(46, 17, 17);
   margin: 0;
   padding: 0;
   font-family: 'Corben', cursive;
+  text-align: center;
 }
 
 #header {
@@ -34,8 +36,24 @@ button {
   font-weight: 1000;
   margin: 0 0.5rem 0 0.5rem;
   padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  border-radius: 0.5rem;
 }
 
 .nav-btn:hover {
   cursor: pointer;
+}
+
+.page-container {
+  color: #ec1703;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  background-color: #5e1914;
+  border: 3px solid coral;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2rem;
 }

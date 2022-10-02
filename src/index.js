@@ -23,43 +23,49 @@ buttonsContainer.classList.add('buttons-container');
 headerElement.append(buttonsContainer);
 
 const homeButton = document.createElement('button');
-homeButton.classList.add('nav-btn');
 homeButton.textContent = 'Home';
-buttonsContainer.append(homeButton);
 
 const menuButton = document.createElement('button');
-menuButton.classList.add('nav-btn');
 menuButton.textContent = 'Menu';
-buttonsContainer.append(menuButton);
 
 const contactsButton = document.createElement('button');
-contactsButton.classList.add('nav-btn');
 contactsButton.textContent = 'Contacts';
-buttonsContainer.append(contactsButton);
+
+const navButtons = [homeButton, menuButton, contactsButton];
+
+navButtons.forEach((btn) => {
+  btn.classList.add('nav-btn');
+  buttonsContainer.append(btn);
+});
+
+const basePageContainer = document.createElement('section');
+basePageContainer.classList.add('page-container');
+
+contentDiv.append(basePageContainer);
 
 const homePage = createHomePage();
-contentDiv.append(homePage);
+basePageContainer.append(homePage);
 
 const menuPage = createMenuPage();
-contentDiv.append(menuPage);
+basePageContainer.append(menuPage);
 
 const contactsPage = createContactsPage();
-contentDiv.append(contactsPage);
+basePageContainer.append(contactsPage);
 
 homeButton.addEventListener('click', () => {
   menuPage.style.display = 'none';
   contactsPage.style.display = 'none';
-  homePage.style.display = 'block';
+  homePage.style.display = 'flex';
 });
 
 menuButton.addEventListener('click', () => {
   homePage.style.display = 'none';
   contactsPage.style.display = 'none';
-  menuPage.style.display = 'block';
+  menuPage.style.display = 'flex';
 });
 
 contactsButton.addEventListener('click', () => {
   homePage.style.display = 'none';
   menuPage.style.display = 'none';
-  contactsPage.style.display = 'block';
+  contactsPage.style.display = 'flex';
 });

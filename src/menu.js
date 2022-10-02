@@ -1,7 +1,9 @@
+import { basePage } from './basePage.js';
+
 export const createMenuPage = () => {
-  const menuPage = document.createElement('div');
-  menuPage.style.display = 'none';
-  menuPage.textContent = 'Menu';
+  const headingText = 'Menu';
+  const initialDisplayStyle = 'none';
+  const menuPage = basePage(headingText, initialDisplayStyle);
 
   return menuPage;
 };

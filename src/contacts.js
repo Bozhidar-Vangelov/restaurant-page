@@ -1,7 +1,9 @@
+import { basePage } from './basePage.js';
+
 export const createContactsPage = () => {
-  const contactsPage = document.createElement('div');
-  contactsPage.style.display = 'none';
-  contactsPage.textContent = 'Contacts';
+  const headingText = 'Contacts';
+  const initialDisplayStyle = 'none';
+  const contactsPage = basePage(headingText, initialDisplayStyle);
 
   return contactsPage;
 };
