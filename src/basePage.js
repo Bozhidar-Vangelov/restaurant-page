@@ -1,6 +1,6 @@
 export const basePage = (headingText, display) => {
   const page = document.createElement('div');
-  page.style.width = '70%';
+  page.style.minWidth = '70%';
 
   page.style.display = display;
   page.classList.add('page');
@@ -10,10 +10,9 @@ export const basePage = (headingText, display) => {
   page.append(heading);
 
   const pageContent = document.createElement('div');
-  pageContent.textContent =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quos temporibus aperiam accusamus provident cumque corrupti, eius quidem. Reprehenderit repudiandae culpa tempore iusto alias laboriosam consectetur, officia saepe tempora quos?';
+  pageContent.classList.add('page-content');
 
   page.append(pageContent);
 
-  return page;
+  return { page, pageContent };
 };

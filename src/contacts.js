@@ -3,7 +3,7 @@ import { basePage } from './basePage.js';
 export const createContactsPage = () => {
   const headingText = 'Contacts';
   const initialDisplayStyle = 'none';
-  const contactsPage = basePage(headingText, initialDisplayStyle);
+  const { page, pageContent } = basePage(headingText, initialDisplayStyle);
 
-  return contactsPage;
+  return page;
 };

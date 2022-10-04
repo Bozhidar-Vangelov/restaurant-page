@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 body,
 button {
   background-color: rgb(46, 17, 17);
   margin: 0;
   padding: 0;
-  font-family: 'Corben', cursive;
+  font-family: 'Fugaz One', cursive;
   text-align: center;
 }
 
@@ -51,9 +51,43 @@ button {
 
 .page {
   background-color: #5e1914;
-  border: 3px solid coral;
+  border: 3px solid #ff908b;
   flex-direction: column;
   border-radius: 0.5rem;
   padding: 2rem;
   margin: 2rem;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+}
+
+.clock-icon {
+  font-size: 3rem;
+  margin-left: 0.5rem;
+}
+
+.working-hours-container {
+  background-color: #ff908b;
+  min-width: 70%;
+  border-radius: 0.5rem;
+  border: 3px solid #ec1703;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.working-hours-heading-container {
+  display: flex;
+  justify-content: center;
+}
+
+.working-hours-heading {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0 0.5rem 0 0;
+}
+
+.working-hours {
+  font-size: 1.1rem;
 }
