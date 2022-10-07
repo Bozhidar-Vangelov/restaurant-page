@@ -1,39 +1,62 @@
 import { basePage } from './basePage.js';
+import { createElement, daysOfWeek } from './utils.js';
 
-export const createHomePage = () => {
+export const createHomePage = (pageContainer) => {
   const headingText = 'A magic factory for healthy food';
   const initialDisplayStyle = 'flex';
-  const { page, pageContent } = basePage(headingText, initialDisplayStyle);
+  // const { page } = basePage(headingText, initialDisplayStyle);
 
-  const daysOfWeek = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
-  ];
+  const page = createElement({
+    type: 'div',
+    styles: { 'min-width': '70%', display: initialDisplayStyle },
+    attributes: { class: 'page' },
+    appendTo: pageContainer,
+  });
 
-  const workingHoursContainer = document.createElement('div');
-  workingHoursContainer.classList.add('working-hours-container');
+  createElement({
+    type: 'h1',
+    props: { textContent: headingText },
+    appendTo: page,
+  });
 
-  const workingHoursHeadingContainer = document.createElement('div');
-  workingHoursHeadingContainer.classList.add('working-hours-heading-container');
-  workingHoursContainer.append(workingHoursHeadingContainer);
+  const pageContent = createElement({
+    type: 'div',
+    attributes: { class: 'page-content' },
+    appendTo: page,
+  });
 
-  const clockIcon = document.createElement('i');
-  clockIcon.classList.add('fa-solid', 'fa-clock', 'clock-icon');
+  const workingHoursContainer = createElement({
+    type: 'div',
+    attributes: { class: 'working-hours-container' },
+    appendTo: pageContent,
+  });
 
-  const workingHoursHeadingText = document.createElement('h2');
-  workingHoursHeadingText.classList.add('working-hours-heading');
-  workingHoursHeadingText.textContent = 'WORKING HOURS';
+  const workingHoursHeadingContainer = createElement({
+    type: 'div',
+    attributes: { class: 'working-hours-heading-container' },
+    appendTo: workingHoursContainer,
+  });
 
-  workingHoursHeadingContainer.append(workingHoursHeadingText, clockIcon);
+  createElement({
+    type: 'i',
+    attributes: { class: 'fa-solid fa-clock clock-icon' },
+    appendTo: workingHoursHeadingContainer,
+  });
+
+  createElement({
+    type: 'h2',
+    props: { textContent: 'WORKING HOURS' },
+
+    attributes: { class: 'working-hours-heading' },
+    appendTo: workingHoursHeadingContainer,
+  });
 
   daysOfWeek.forEach((day) => {
-    const paragraph = document.createElement('p');
-    paragraph.classList.add('working-hours');
+    const paragraph = createElement({
+      type: 'h2',
+      attributes: { class: 'working-hours' },
+      appendTo: workingHoursContainer,
+    });
 
     switch (day) {
       case 'Thursday':
@@ -50,8 +73,6 @@ export const createHomePage = () => {
 
     workingHoursContainer.append(paragraph);
   });
-
-  pageContent.append(workingHoursContainer);
 
   return page;
 };

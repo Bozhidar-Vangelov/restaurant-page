@@ -2,70 +2,73 @@ import './styles.css';
 import { createHomePage } from './home.js';
 import { createMenuPage } from './menu.js';
 import { createContactsPage } from './contacts.js';
+import { createElement, navButtonsText } from './utils.js';
 
 const contentDiv = document.getElementById('content');
 
-const headerElement = document.createElement('header');
-headerElement.setAttribute('id', 'header');
-contentDiv.append(headerElement);
-
-const logoContainer = document.createElement('div', 'logo-container');
-logoContainer.classList.add('logo-container');
-headerElement.append(logoContainer);
-
-const logoImg = document.createElement('img');
-logoImg.classList.add('logo');
-logoImg.setAttribute('src', '../src/images/logo.png');
-logoContainer.append(logoImg);
-
-const buttonsContainer = document.createElement('div');
-buttonsContainer.classList.add('buttons-container');
-headerElement.append(buttonsContainer);
-
-const homeButton = document.createElement('button');
-homeButton.textContent = 'Home';
-
-const menuButton = document.createElement('button');
-menuButton.textContent = 'Menu';
-
-const contactsButton = document.createElement('button');
-contactsButton.textContent = 'Contacts';
-
-const navButtons = [homeButton, menuButton, contactsButton];
-
-navButtons.forEach((btn) => {
-  btn.classList.add('nav-btn');
-  buttonsContainer.append(btn);
+const headerElement = createElement({
+  type: 'header',
+  attributes: { id: 'header' },
+  appendTo: contentDiv,
 });
 
-const basePageContainer = document.createElement('section');
-basePageContainer.classList.add('page-container');
-
-contentDiv.append(basePageContainer);
-
-const homePage = createHomePage();
-basePageContainer.append(homePage);
-
-const menuPage = createMenuPage();
-basePageContainer.append(menuPage);
-
-const contactsPage = createContactsPage();
-basePageContainer.append(contactsPage);
-
-homeButton.addEventListener('click', () => {
-  menuPage.style.display = 'none';
-  contactsPage.style.display = 'none';
-  homePage.style.display = 'flex';
+const logoContainer = createElement({
+  type: 'div',
+  attributes: { class: 'logo-container' },
+  appendTo: headerElement,
 });
 
-menuButton.addEventListener('click', () => {
-  homePage.style.display = 'none';
-  contactsPage.style.display = 'none';
-  menuPage.style.display = 'flex';
+createElement({
+  type: 'img',
+  attributes: { class: 'logo', src: '../src/images/logo.png' },
+  appendTo: logoContainer,
 });
 
-contactsButton.addEventListener('click', () => {
-  homePage.style.display = 'none';
-  menuPage.style.display = 'none';
-  contactsPage.style.display = 'flex';
+const buttonsContainer = createElement({
+  type: 'div',
+  attributes: { class: 'buttons-container', src: '../src/images/logo.png' },
+  appendTo: headerElement,
 });
+
+const handleButtonClick = (e) => {
+  const buttonText = e.target.textContent;
+
+  switch (buttonText) {
+    case 'Home':
+      menuPage.style.display = 'none';
+      contactsPage.style.display = 'none';
+      homePage.style.display = 'flex';
+      break;
+    case 'Menu':
+      homePage.style.display = 'none';
+      contactsPage.style.display = 'none';
+      menuPage.style.display = 'flex';
+      break;
+    case 'Contacts':
+      homePage.style.display = 'none';
+      menuPage.style.display = 'none';
+      contactsPage.style.display = 'flex';
+  }
+};
+
+navButtonsText.forEach((text) => {
+  createElement({
+    type: 'button',
+    attributes: { class: 'nav-btn' },
+    props: { textContent: text },
+    appendTo: buttonsContainer,
+    eventHandlers: { click: handleButtonClick },
+  });
+});
+
+const basePageContainer = createElement({
+  type: 'section',
+  attributes: { class: 'page-container' },
+  appendTo: contentDiv,
+});
+
+const homePage = createHomePage(basePageContainer);
+
+const menuPage = createMenuPage(basePageContainer);
+
+const contactsPage = createContactsPage(basePageContainer);

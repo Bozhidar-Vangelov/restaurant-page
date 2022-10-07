@@ -1,9 +1,21 @@
-import { basePage } from './basePage.js';
+import { createElement } from './utils.js';
 
-export const createMenuPage = () => {
+export const createMenuPage = (pageContainer) => {
   const headingText = 'Menu';
   const initialDisplayStyle = 'none';
-  const { page, pageContent } = basePage(headingText, initialDisplayStyle);
+
+  const page = createElement({
+    type: 'div',
+    styles: { 'min-width': '70%', display: initialDisplayStyle },
+    attributes: { class: 'page' },
+    appendTo: pageContainer,
+  });
+
+  createElement({
+    type: 'h1',
+    props: { textContent: headingText },
+    appendTo: page,
+  });
 
   return page;
 };
