@@ -24,8 +24,8 @@ button {
 }
 
 .logo {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 12rem;
+  max-height: 12rem;
 }
 
 .nav-btn {
@@ -63,32 +63,40 @@ button {
   justify-content: center;
 }
 
-.clock-icon {
+.clock-icon,
+.info-icon {
   font-size: 3rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.working-hours-container {
+.working-hours-container,
+.about-us-container {
   background-color: #ff908b;
-  min-width: 70%;
+  min-width: 40%;
   border-radius: 0.5rem;
   border: 3px solid #ec1703;
   padding: 2rem;
   margin: 2rem;
 }
 
-.working-hours-heading-container {
+.working-hours-heading-container,
+.about-us-heading-container {
   display: flex;
-  justify-content: center;
 }
 
-.working-hours-heading {
+.working-hours-heading,
+.about-us-heading {
   font-size: 2rem;
   padding: 0;
-  margin: 0 0.5rem 0 0;
+  margin: 0;
 }
 
-.working-hours {
+.working-hours,
+.about-us {
   font-size: 1.3rem;
   font-family: 'Staatliches', cursive;
+}
+
+.about-us-img {
+  max-width: 12rem;
 }

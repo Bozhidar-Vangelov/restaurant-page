@@ -1,7 +1,7 @@
-import './styles.css';
+import { createContactsPage } from './contacts.js';
 import { createHomePage } from './home.js';
 import { createMenuPage } from './menu.js';
-import { createContactsPage } from './contacts.js';
+import './styles.css';
 import { createElement, navButtonsText } from './utils.js';
 
 const contentDiv = document.getElementById('content');

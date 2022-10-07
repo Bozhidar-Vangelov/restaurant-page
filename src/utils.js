@@ -13,6 +13,8 @@ export const createElement = function ({
   const elementEventHandlers = eventHandlers || {};
   const elementAppendTo = appendTo || 'body';
 
+  console.log(attributes);
+
   const element = document.createElement(elementType);
 
   for (let key in elementStyles) {
