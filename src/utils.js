@@ -11,9 +11,7 @@ export const createElement = function ({
   const elementAttributes = attributes || {};
   const elementProps = props || {};
   const elementEventHandlers = eventHandlers || {};
-  const elementAppendTo = appendTo || 'body';
-
-  console.log(attributes);
+  const elementAppendTo = appendTo || document.body;
 
   const element = document.createElement(elementType);
 

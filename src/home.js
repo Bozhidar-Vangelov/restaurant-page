@@ -37,7 +37,7 @@ export const createHomePage = (pageContainer) => {
 
   createElement({
     type: 'i',
-    attributes: { class: 'fa-solid fa-clock clock-icon' },
+    attributes: { class: 'fa-solid fa-clock heading-icon' },
     appendTo: workingHoursHeadingContainer,
   });
 
@@ -86,7 +86,7 @@ export const createHomePage = (pageContainer) => {
 
   createElement({
     type: 'i',
-    attributes: { class: 'fa-solid fa-circle-info info-icon' },
+    attributes: { class: 'fa-solid fa-circle-info heading-icon' },
     appendTo: aboutUsHeadingContainer,
   });
 

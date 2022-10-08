@@ -23,30 +23,75 @@ export const createMenuPage = (pageContainer) => {
     appendTo: page,
   });
 
-  const workingHoursContainer = createElement({
+  const burgersContainer = createElement({
     type: 'div',
     attributes: { class: 'content-container' },
     appendTo: pageContent,
   });
 
-  const workingHoursHeadingContainer = createElement({
+  const burgersHeadingContainer = createElement({
     type: 'div',
     attributes: { class: 'content-heading-container' },
-    appendTo: workingHoursContainer,
+    appendTo: burgersContainer,
   });
 
   createElement({
     type: 'i',
-    attributes: { class: 'fa-solid fa-clock clock-icon' },
-    appendTo: workingHoursHeadingContainer,
+    attributes: { class: 'fa-solid fa-burger heading-icon' },
+    appendTo: burgersHeadingContainer,
   });
 
   createElement({
     type: 'h2',
     props: { textContent: 'BURGERS' },
-
     attributes: { class: 'content-heading' },
-    appendTo: workingHoursHeadingContainer,
+    appendTo: burgersHeadingContainer,
+  });
+
+  const burgerContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burger-container' },
+    appendTo: burgersContainer,
+  });
+
+  const burgerSvgContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burger-svg-container' },
+    appendTo: burgerContainer,
+  });
+
+  const burgerSvg = createElement({
+    type: 'img',
+    attributes: {
+      class: 'burger-svg',
+      src: '../src/images/virgo-burger.svg',
+    },
+
+    appendTo: burgerSvgContainer,
+  });
+
+  const burgerInfoContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burger-info-container' },
+    appendTo: burgerContainer,
+  });
+
+  const burgerName = createElement({
+    type: 'p',
+    attributes: { class: 'burger-name' },
+    props: { textContent: 'Virgo Burger' },
+    appendTo: burgerInfoContainer,
+  });
+
+  const burgerList = createElement({
+    type: 'ul',
+    appendTo: burgerInfoContainer,
+  });
+
+  const burgerListItem = createElement({
+    type: 'li',
+    props: { textContent: 'Lettuce' },
+    appendTo: burgerList,
   });
 
   return page;

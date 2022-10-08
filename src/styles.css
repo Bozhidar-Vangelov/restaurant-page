@@ -63,8 +63,7 @@ button {
   justify-content: center;
 }
 
-.clock-icon,
-.info-icon {
+.heading-icon {
   font-size: 3rem;
   margin-right: 0.5rem;
 }
@@ -95,4 +94,27 @@ button {
 
 .content-img {
   max-width: 12rem;
+}
+
+.burger-container {
+  display: flex;
+  border: 3px solid lime;
+}
+
+.burger-svg-container,
+.burger-info-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 1rem;
+  border: 3px solid lime;
+}
+
+.burger-svg {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.burger-name {
+  font-size: x-large;
 }
