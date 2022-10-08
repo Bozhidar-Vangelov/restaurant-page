@@ -69,8 +69,7 @@ button {
   margin-right: 0.5rem;
 }
 
-.working-hours-container,
-.about-us-container {
+.content-container {
   background-color: #ff908b;
   min-width: 40%;
   border-radius: 0.5rem;
@@ -79,24 +78,21 @@ button {
   margin: 2rem;
 }
 
-.working-hours-heading-container,
-.about-us-heading-container {
+.content-heading-container {
   display: flex;
 }
 
-.working-hours-heading,
-.about-us-heading {
+.content-heading {
   font-size: 2rem;
   padding: 0;
   margin: 0;
 }
 
-.working-hours,
-.about-us {
+.content {
   font-size: 1.3rem;
   font-family: 'Staatliches', cursive;
 }
 
-.about-us-img {
+.content-img {
   max-width: 12rem;
 }

@@ -25,13 +25,13 @@ export const createHomePage = (pageContainer) => {
 
   const workingHoursContainer = createElement({
     type: 'div',
-    attributes: { class: 'working-hours-container' },
+    attributes: { class: 'content-container' },
     appendTo: pageContent,
   });
 
   const workingHoursHeadingContainer = createElement({
     type: 'div',
-    attributes: { class: 'working-hours-heading-container' },
+    attributes: { class: 'content-heading-container' },
     appendTo: workingHoursContainer,
   });
 
@@ -45,14 +45,14 @@ export const createHomePage = (pageContainer) => {
     type: 'h2',
     props: { textContent: 'WORKING HOURS' },
 
-    attributes: { class: 'working-hours-heading' },
+    attributes: { class: 'content-heading' },
     appendTo: workingHoursHeadingContainer,
   });
 
   daysOfWeek.forEach((day) => {
     const headingText = createElement({
       type: 'h2',
-      attributes: { class: 'working-hours' },
+      attributes: { class: 'content' },
       appendTo: workingHoursContainer,
     });
 
@@ -74,13 +74,13 @@ export const createHomePage = (pageContainer) => {
 
   const aboutUsContainer = createElement({
     type: 'div',
-    attributes: { class: 'about-us-container' },
+    attributes: { class: 'content-container' },
     appendTo: pageContent,
   });
 
   const aboutUsHeadingContainer = createElement({
     type: 'div',
-    attributes: { class: 'about-us-heading-container' },
+    attributes: { class: 'content-heading-container' },
     appendTo: aboutUsContainer,
   });
 
@@ -93,7 +93,7 @@ export const createHomePage = (pageContainer) => {
   createElement({
     type: 'h2',
     props: { textContent: 'ABOUT US' },
-    attributes: { class: 'about-us-heading' },
+    attributes: { class: 'content-heading' },
     appendTo: aboutUsHeadingContainer,
   });
 
@@ -109,14 +109,14 @@ export const createHomePage = (pageContainer) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'about-us-img', src: '../src/images/home-burger.svg' },
+    attributes: { class: 'content-img', src: '../src/images/home-burger.svg' },
     appendTo: aboutUsContainer,
   });
 
   createElement({
     type: 'img',
     attributes: {
-      class: 'about-us-img',
+      class: 'content-img',
       src: '../src/images/home-french-fries.svg',
     },
     appendTo: aboutUsContainer,
