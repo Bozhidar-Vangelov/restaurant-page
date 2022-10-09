@@ -1,24 +1,5 @@
 import { createContainers, createElement } from './utils.js';
-
-const containersData = [
-  {
-    iconClass: 'fa-solid fa-burger heading-icon',
-    textContent: 'BURGERS',
-  },
-];
-
-const burgers = [
-  {
-    name: 'Virgo Burger',
-    src: '../src/images/virgo-burger.svg',
-    ingredients: ['Lettuce', 'Meat', 'Cheese', 'Tomatoes', 'Sauce'],
-  },
-  {
-    name: 'Miss Classy',
-    src: '../src/images/miss-classy.svg',
-    ingredients: ['Lettuce', 'Meat', 'Cheese', 'Tomatoes', 'Sauce'],
-  },
-];
+import { menuContainersData, burgers } from './data.js';
 
 export const createMenuPage = (pageContainer) => {
   const headingText = 'Menu';
@@ -43,7 +24,7 @@ export const createMenuPage = (pageContainer) => {
     appendTo: page,
   });
 
-  const [burgersContainer] = createContainers(pageContent, containersData);
+  const [burgersContainer] = createContainers(pageContent, menuContainersData);
 
   createBurgers(burgersContainer, burgers);
 

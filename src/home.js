@@ -1,25 +1,5 @@
 import { createElement, createContainers } from './utils.js';
-
-const daysOfWeek = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-];
-
-const containersData = [
-  {
-    iconClass: 'fa-solid fa-clock heading-icon',
-    textContent: 'WORKING HOURS',
-  },
-  {
-    iconClass: 'fa-solid fa-circle-info heading-icon',
-    textContent: 'ABOUT US',
-  },
-];
+import { homeContainersData, daysOfWeek } from './data.js';
 
 export const createHomePage = (pageContainer) => {
   const headingText = 'A magic factory for healthy food';
@@ -46,7 +26,7 @@ export const createHomePage = (pageContainer) => {
 
   const [workingHoursContainer, aboutUsContainer] = createContainers(
     pageContent,
-    containersData
+    homeContainersData
   );
 
   createWorkingHours(workingHoursContainer);
