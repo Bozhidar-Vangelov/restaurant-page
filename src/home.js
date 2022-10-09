@@ -3,11 +3,10 @@ import { homeContainersData, daysOfWeek } from './data.js';
 
 export const createHomePage = (pageContainer) => {
   const headingText = 'A magic factory for healthy food';
-  const initialDisplayStyle = 'flex';
 
   const page = createElement({
     type: 'div',
-    styles: { 'min-width': '70%', display: initialDisplayStyle },
+    styles: { 'min-width': '70%' },
     attributes: { class: 'page' },
     appendTo: pageContainer,
   });

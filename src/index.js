@@ -32,24 +32,28 @@ const buttonsContainer = createElement({
   appendTo: headerElement,
 });
 
+const basePageContainer = createElement({
+  type: 'section',
+  attributes: { class: 'page-container' },
+  appendTo: contentDiv,
+});
+
+createHomePage(basePageContainer);
+
 const handleButtonClick = (e) => {
+  basePageContainer.removeChild(basePageContainer.firstChild);
+
   const buttonText = e.target.textContent;
 
   switch (buttonText) {
     case 'Home':
-      menuPage.style.display = 'none';
-      contactsPage.style.display = 'none';
-      homePage.style.display = 'flex';
+      createHomePage(basePageContainer);
       break;
     case 'Menu':
-      homePage.style.display = 'none';
-      contactsPage.style.display = 'none';
-      menuPage.style.display = 'flex';
+      createMenuPage(basePageContainer);
       break;
     case 'Contacts':
-      homePage.style.display = 'none';
-      menuPage.style.display = 'none';
-      contactsPage.style.display = 'flex';
+      createContactsPage(basePageContainer);
   }
 };
 
@@ -62,13 +66,3 @@ navButtonsText.forEach((text) => {
     eventHandlers: { click: handleButtonClick },
   });
 });
-
-const basePageContainer = createElement({
-  type: 'section',
-  attributes: { class: 'page-container' },
-  appendTo: contentDiv,
-});
-
-const homePage = createHomePage(basePageContainer);
-const menuPage = createMenuPage(basePageContainer);
-const contactsPage = createContactsPage(basePageContainer);

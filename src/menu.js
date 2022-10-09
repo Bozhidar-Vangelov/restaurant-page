@@ -3,11 +3,10 @@ import { menuContainersData, burgers } from './data.js';
 
 export const createMenuPage = (pageContainer) => {
   const headingText = 'Menu';
-  const initialDisplayStyle = 'none';
 
   const page = createElement({
     type: 'div',
-    styles: { 'min-width': '70%', display: initialDisplayStyle },
+    styles: { 'min-width': '70%' },
     attributes: { class: 'page' },
     appendTo: pageContainer,
   });

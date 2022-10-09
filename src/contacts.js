@@ -2,11 +2,10 @@ import { createElement } from './utils.js';
 
 export const createContactsPage = (pageContainer) => {
   const headingText = 'Contacts';
-  const initialDisplayStyle = 'none';
 
   const page = createElement({
     type: 'div',
-    styles: { 'min-width': '70%', display: initialDisplayStyle },
+    styles: { 'min-width': '70%' },
     attributes: { class: 'page' },
     appendTo: pageContainer,
   });
