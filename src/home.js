@@ -73,7 +73,7 @@ const createAboutUs = (aboutUsContainer) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'content-img', src: '../src/images/home-burger.svg' },
+    attributes: { class: 'content-img', src: '../src/images/home-burger.png' },
     appendTo: aboutUsContainer,
   });
 
@@ -81,7 +81,7 @@ const createAboutUs = (aboutUsContainer) => {
     type: 'img',
     attributes: {
       class: 'content-img',
-      src: '../src/images/home-french-fries.svg',
+      src: '../src/images/home-french-fries.png',
     },
     appendTo: aboutUsContainer,
   });

@@ -24,19 +24,64 @@ export const createMenuPage = (pageContainer) => {
     appendTo: page,
   });
 
-  const [burgersContainer] = createContainers(pageContent, menuContainersData);
+  const [contentContainer] = createContainers(pageContent, menuContainersData);
 
-  createBurgers(burgersContainer, burgers);
+  createBurgers(contentContainer, burgers);
 
   return page;
 };
 
-const createBurgers = (burgersContainer, burgers) => {
+const createBurgers = (contentContainer, burgers) => {
+  const burgersContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burgers-container' },
+    appendTo: contentContainer,
+  });
+
+  const firstColContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burgers-col-container' },
+    appendTo: burgersContainer,
+  });
+
+  const secondColContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burgers-col-container' },
+    appendTo: burgersContainer,
+  });
+
+  const thirdColContainer = createElement({
+    type: 'div',
+    attributes: { class: 'burgers-col-container' },
+    appendTo: burgersContainer,
+  });
+
+  let count = 0;
+
   burgers.forEach((burger) => {
+    let targetedContainer = undefined;
+
+    switch (count) {
+      case 0:
+        targetedContainer = firstColContainer;
+        break;
+      case 1:
+        targetedContainer = secondColContainer;
+        break;
+      case 2:
+        targetedContainer = thirdColContainer;
+    }
+
+    if (count === 2) {
+      count = 0;
+    } else {
+      count++;
+    }
+
     const burgerContainer = createElement({
       type: 'div',
       attributes: { class: 'burger-container' },
-      appendTo: burgersContainer,
+      appendTo: targetedContainer,
     });
 
     const burgerSvgContainer = createElement({
