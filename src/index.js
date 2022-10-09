@@ -3,28 +3,13 @@ import { createHomePage } from './home.js';
 import { createMenuPage } from './menu.js';
 import './styles.css';
 import { createElement } from './utils.js';
+import { createHeader } from './header.js';
 
 const navButtonsText = ['Home', 'Menu', 'Contacts'];
 
 const contentDiv = document.getElementById('content');
 
-const headerElement = createElement({
-  type: 'header',
-  attributes: { id: 'header' },
-  appendTo: contentDiv,
-});
-
-const logoContainer = createElement({
-  type: 'div',
-  attributes: { class: 'logo-container' },
-  appendTo: headerElement,
-});
-
-createElement({
-  type: 'img',
-  attributes: { class: 'logo', src: '../src/images/logo.png' },
-  appendTo: logoContainer,
-});
+const headerElement = createHeader(contentDiv);
 
 const buttonsContainer = createElement({
   type: 'div',
