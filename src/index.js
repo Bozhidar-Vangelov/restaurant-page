@@ -2,7 +2,9 @@ import { createContactsPage } from './contacts.js';
 import { createHomePage } from './home.js';
 import { createMenuPage } from './menu.js';
 import './styles.css';
-import { createElement, navButtonsText } from './utils.js';
+import { createElement } from './utils.js';
+
+const navButtonsText = ['Home', 'Menu', 'Contacts'];
 
 const contentDiv = document.getElementById('content');
 
@@ -68,7 +70,5 @@ const basePageContainer = createElement({
 });
 
 const homePage = createHomePage(basePageContainer);
-
 const menuPage = createMenuPage(basePageContainer);
-
 const contactsPage = createContactsPage(basePageContainer);

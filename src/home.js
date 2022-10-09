@@ -1,4 +1,25 @@
-import { createElement, daysOfWeek } from './utils.js';
+import { createElement, createContainers } from './utils.js';
+
+const daysOfWeek = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+];
+
+const containersData = [
+  {
+    iconClass: 'fa-solid fa-clock heading-icon',
+    textContent: 'WORKING HOURS',
+  },
+  {
+    iconClass: 'fa-solid fa-circle-info heading-icon',
+    textContent: 'ABOUT US',
+  },
+];
 
 export const createHomePage = (pageContainer) => {
   const headingText = 'A magic factory for healthy food';
@@ -23,32 +44,18 @@ export const createHomePage = (pageContainer) => {
     appendTo: page,
   });
 
-  const workingHoursContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-container' },
-    appendTo: pageContent,
-  });
+  const [workingHoursContainer, aboutUsContainer] = createContainers(
+    pageContent,
+    containersData
+  );
 
-  const workingHoursHeadingContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-heading-container' },
-    appendTo: workingHoursContainer,
-  });
+  createWorkingHours(workingHoursContainer);
+  createAboutUs(aboutUsContainer);
 
-  createElement({
-    type: 'i',
-    attributes: { class: 'fa-solid fa-clock heading-icon' },
-    appendTo: workingHoursHeadingContainer,
-  });
+  return page;
+};
 
-  createElement({
-    type: 'h2',
-    props: { textContent: 'WORKING HOURS' },
-
-    attributes: { class: 'content-heading' },
-    appendTo: workingHoursHeadingContainer,
-  });
-
+const createWorkingHours = (workingHoursContainer) => {
   daysOfWeek.forEach((day) => {
     const headingText = createElement({
       type: 'h2',
@@ -71,32 +78,9 @@ export const createHomePage = (pageContainer) => {
 
     workingHoursContainer.append(headingText);
   });
+};
 
-  const aboutUsContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-container' },
-    appendTo: pageContent,
-  });
-
-  const aboutUsHeadingContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-heading-container' },
-    appendTo: aboutUsContainer,
-  });
-
-  createElement({
-    type: 'i',
-    attributes: { class: 'fa-solid fa-circle-info heading-icon' },
-    appendTo: aboutUsHeadingContainer,
-  });
-
-  createElement({
-    type: 'h2',
-    props: { textContent: 'ABOUT US' },
-    attributes: { class: 'content-heading' },
-    appendTo: aboutUsHeadingContainer,
-  });
-
+const createAboutUs = (aboutUsContainer) => {
   createElement({
     type: 'h2',
     attributes: { class: 'about-us' },
@@ -121,6 +105,4 @@ export const createHomePage = (pageContainer) => {
     },
     appendTo: aboutUsContainer,
   });
-
-  return page;
 };

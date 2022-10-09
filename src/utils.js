@@ -34,14 +34,36 @@ export const createElement = function ({
   return element;
 };
 
-export const navButtonsText = ['Home', 'Menu', 'Contacts'];
+export const createContainers = (pageContent, containersData) => {
+  const containers = containersData.map((data) => {
+    const contentContainer = createElement({
+      type: 'div',
+      attributes: { class: 'content-container' },
+      appendTo: pageContent,
+    });
 
-export const daysOfWeek = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-];
+    const contentHeadingContainer = createElement({
+      type: 'div',
+      attributes: { class: 'content-heading-container' },
+      appendTo: contentContainer,
+    });
+
+    createElement({
+      type: 'i',
+      attributes: { class: data.iconClass },
+      appendTo: contentHeadingContainer,
+    });
+
+    createElement({
+      type: 'h2',
+      props: { textContent: data.textContent },
+
+      attributes: { class: 'content-heading' },
+      appendTo: contentHeadingContainer,
+    });
+
+    return contentContainer;
+  });
+
+  return containers;
+};

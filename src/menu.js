@@ -1,4 +1,24 @@
-import { createElement } from './utils.js';
+import { createContainers, createElement } from './utils.js';
+
+const containersData = [
+  {
+    iconClass: 'fa-solid fa-burger heading-icon',
+    textContent: 'BURGERS',
+  },
+];
+
+const burgers = [
+  {
+    name: 'Virgo Burger',
+    src: '../src/images/virgo-burger.svg',
+    ingredients: ['Lettuce', 'Meat', 'Cheese', 'Tomatoes', 'Sauce'],
+  },
+  {
+    name: 'Miss Classy',
+    src: '../src/images/miss-classy.svg',
+    ingredients: ['Lettuce', 'Meat', 'Cheese', 'Tomatoes', 'Sauce'],
+  },
+];
 
 export const createMenuPage = (pageContainer) => {
   const headingText = 'Menu';
@@ -23,76 +43,62 @@ export const createMenuPage = (pageContainer) => {
     appendTo: page,
   });
 
-  const burgersContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-container' },
-    appendTo: pageContent,
-  });
+  const [burgersContainer] = createContainers(pageContent, containersData);
 
-  const burgersHeadingContainer = createElement({
-    type: 'div',
-    attributes: { class: 'content-heading-container' },
-    appendTo: burgersContainer,
-  });
-
-  createElement({
-    type: 'i',
-    attributes: { class: 'fa-solid fa-burger heading-icon' },
-    appendTo: burgersHeadingContainer,
-  });
-
-  createElement({
-    type: 'h2',
-    props: { textContent: 'BURGERS' },
-    attributes: { class: 'content-heading' },
-    appendTo: burgersHeadingContainer,
-  });
-
-  const burgerContainer = createElement({
-    type: 'div',
-    attributes: { class: 'burger-container' },
-    appendTo: burgersContainer,
-  });
-
-  const burgerSvgContainer = createElement({
-    type: 'div',
-    attributes: { class: 'burger-svg-container' },
-    appendTo: burgerContainer,
-  });
-
-  const burgerSvg = createElement({
-    type: 'img',
-    attributes: {
-      class: 'burger-svg',
-      src: '../src/images/virgo-burger.svg',
-    },
-
-    appendTo: burgerSvgContainer,
-  });
-
-  const burgerInfoContainer = createElement({
-    type: 'div',
-    attributes: { class: 'burger-info-container' },
-    appendTo: burgerContainer,
-  });
-
-  const burgerName = createElement({
-    type: 'p',
-    attributes: { class: 'burger-name' },
-    props: { textContent: 'Virgo Burger' },
-    appendTo: burgerInfoContainer,
-  });
-
-  const burgerList = createElement({
-    type: 'ul',
-    appendTo: burgerInfoContainer,
-  });
-
-  const burgerListItem = createElement({
-    type: 'li',
-    props: { textContent: 'Lettuce' },
-    appendTo: burgerList,
-  });
+  createBurgers(burgersContainer, burgers);
 
   return page;
+};
+
+const createBurgers = (burgersContainer, burgers) => {
+  burgers.forEach((burger) => {
+    const burgerContainer = createElement({
+      type: 'div',
+      attributes: { class: 'burger-container' },
+      appendTo: burgersContainer,
+    });
+
+    const burgerSvgContainer = createElement({
+      type: 'div',
+      attributes: { class: 'burger-svg-container' },
+      appendTo: burgerContainer,
+    });
+
+    createElement({
+      type: 'img',
+      attributes: {
+        class: 'burger-svg',
+        src: burger.src,
+      },
+
+      appendTo: burgerSvgContainer,
+    });
+
+    const burgerInfoContainer = createElement({
+      type: 'div',
+      attributes: { class: 'burger-info-container' },
+      appendTo: burgerContainer,
+    });
+
+    createElement({
+      type: 'p',
+      attributes: { class: 'burger-name' },
+      props: { textContent: burger.name },
+      appendTo: burgerInfoContainer,
+    });
+
+    const burgerList = createElement({
+      type: 'ul',
+      appendTo: burgerInfoContainer,
+      attributes: { class: 'burger-ingredients-container' },
+    });
+
+    burger.ingredients.forEach((ingredient) =>
+      createElement({
+        type: 'li',
+        props: { textContent: ingredient },
+        appendTo: burgerList,
+      })
+    );
+  });
 };
