@@ -15,19 +15,20 @@ export const createElement = function ({
 
   const element = document.createElement(elementType);
 
-  for (let key in elementStyles) {
-    element.style[key] = elementStyles[key];
-  }
+  Object.keys(elementStyles).forEach(
+    (key) => (element.style[key] = elementStyles[key])
+  );
 
-  for (let key in elementAttributes) {
-    element.setAttribute(key, elementAttributes[key]);
-  }
-  for (let key in elementProps) {
-    element[key] = elementProps[key];
-  }
-  for (let key in elementEventHandlers) {
-    element.addEventListener(key, elementEventHandlers[key]);
-  }
+  Object.keys(elementAttributes).forEach((key) =>
+    element.setAttribute(key, elementAttributes[key])
+  );
+
+  Object.keys(elementProps).forEach(
+    (key) => (element[key] = elementProps[key])
+  );
+  Object.keys(elementEventHandlers).forEach((key) =>
+    element.addEventListener(key, elementEventHandlers[key])
+  );
 
   elementAppendTo.append(element);
 

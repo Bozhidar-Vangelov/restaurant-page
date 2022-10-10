@@ -65,7 +65,7 @@ const createAboutUs = (aboutUsContainer) => {
     attributes: { class: 'about-us' },
     props: {
       textContent:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas cumque enim sapiente ullam ea quidem autem eum ipsum, laborum accusamus perferendis explicabo totam laudantium. Sint excepturi delectus voluptate asperiores.',
+        "There is something magical here. This is Virgo's restaurant located in Burgtown. Every day many people come to this suburban street to support an idea, that in order to move forward it is sometimes necessary to look back. This is why our burgers are entirely home made.",
     },
     appendTo: aboutUsContainer,
   });
