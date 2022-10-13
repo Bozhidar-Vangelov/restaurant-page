@@ -26,6 +26,17 @@ export const menuContainersData = [
   },
 ];
 
+export const contactsPageContainersData = [
+  {
+    iconClass: 'fa-solid fa-address-book heading-icon',
+    textContent: 'CONTACTS',
+  },
+  {
+    iconClass: 'fa-solid fa-map heading-icon',
+    textContent: 'MAP',
+  },
+];
+
 export const burgers = [
   {
     name: 'Virgo Burger',
@@ -130,3 +141,12 @@ export const burgers = [
     ],
   },
 ];
+
+export const contactsData = {
+  email: 'virgo-burger@virgo-burger.net',
+  'phone number': '666-777-888',
+  fax: '111-222-333',
+  street: '5555 Sandwich way',
+  city: 'Burgtown',
+  'zip code': '999'
+};

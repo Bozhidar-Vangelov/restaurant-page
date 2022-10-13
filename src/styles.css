@@ -138,3 +138,9 @@ button {
 .burgers-container {
   display: flex;
 }
+
+.map-img {
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 1rem;
+}

@@ -1,4 +1,5 @@
-import { createElement } from './utils.js';
+import { createContainers, createElement } from './utils.js';
+import { contactsPageContainersData, contactsData } from './data.js';
 
 export const createContactsPage = (pageContainer) => {
   const headingText = 'Contacts';
@@ -16,5 +17,38 @@ export const createContactsPage = (pageContainer) => {
     appendTo: page,
   });
 
+  const pageContent = createElement({
+    type: 'div',
+    attributes: { class: 'page-content' },
+    appendTo: page,
+  });
+
+  const [contactsContainer, mapContainer] = createContainers(
+    pageContent,
+    contactsPageContainersData
+  );
+
+  createContacts(contactsContainer, contactsData);
+
+  createElement({
+    type: 'img',
+    attributes: {
+      class: 'map-img',
+      src: '../src/images/map.png',
+    },
+    appendTo: mapContainer,
+  });
+
   return page;
+};
+
+const createContacts = (contactsContainer, contactsData) => {
+  Object.keys(contactsData).forEach((key) => {
+    createElement({
+      type: 'h2',
+      attributes: { class: 'contact' },
+      props: { textContent: `${key.toUpperCase()}: ${contactsData[key]}` },
+      appendTo: contactsContainer,
+    });
+  });
 };
