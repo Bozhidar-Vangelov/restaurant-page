@@ -89,7 +89,9 @@ button {
   margin: 0;
 }
 
-.content {
+.content,
+.contact,
+.about-us {
   font-size: 1.3rem;
   font-family: 'Staatliches', cursive;
 }
@@ -101,7 +103,6 @@ button {
 .burger-container {
   display: flex;
   justify-content: space-around;
-  /* border: 3px solid lime; */
 }
 
 .burger-svg-container,
@@ -114,8 +115,10 @@ button {
 }
 
 .burger-svg {
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 10rem;
+  max-height: 10rem;
+  min-width: 10rem;
+  min-height: 10rem;
 }
 
 .burger-name {
@@ -133,14 +136,26 @@ button {
   margin: 2rem 1rem 2rem 1rem;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(#2e1111, #5e1914);
+  width: 33%;
 }
 
 .burgers-container {
   display: flex;
+  flex-direction: column;
 }
 
 .map-img {
   max-width: 90%;
   max-height: 90%;
   margin-top: 1rem;
+}
+
+.burgers-col-container {
+  display: flex;
+}
+
+li {
+  font-size: 1.3rem;
+  font-family: 'Staatliches', cursive;
+  margin: 0.2rem;
 }
