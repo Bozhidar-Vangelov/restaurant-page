@@ -9,7 +9,7 @@ export const createHeader = (contentDiv) => {
 
   const logoContainer = createElement({
     type: 'div',
-    attributes: { class: 'logo-container' },
+    attributes: { class: 'logo-container flex justify-center' },
     appendTo: headerElement,
   });
 

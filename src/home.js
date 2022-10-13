@@ -19,7 +19,7 @@ export const createHomePage = (pageContainer) => {
 
   const pageContent = createElement({
     type: 'div',
-    attributes: { class: 'page-content' },
+    attributes: { class: 'flex justify-center' },
     appendTo: page,
   });
 

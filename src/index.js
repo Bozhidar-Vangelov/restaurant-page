@@ -13,13 +13,16 @@ const headerElement = createHeader(contentDiv);
 
 const buttonsContainer = createElement({
   type: 'div',
-  attributes: { class: 'buttons-container', src: '../src/images/logo.png' },
+  attributes: {
+    class: 'buttons-container flex justify-center',
+    src: '../src/images/logo.png',
+  },
   appendTo: headerElement,
 });
 
 const basePageContainer = createElement({
   type: 'section',
-  attributes: { class: 'page-container' },
+  attributes: { class: 'page-container flex justify-center' },
   appendTo: contentDiv,
 });
 

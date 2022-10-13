@@ -9,18 +9,21 @@ button {
   text-align: center;
 }
 
-#header {
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.justify-center {
   justify-content: center;
+}
+
+#header {
   background-color: #5e1914;
   padding: 1rem;
 }
 
 .logo-container,
 .buttons-container {
-  display: flex;
-  justify-content: center;
   margin: 0.5rem;
 }
 
@@ -46,22 +49,14 @@ button {
 
 .page-container {
   color: #ec1703;
-  display: flex;
-  justify-content: center;
 }
 
 .page {
   background-color: #5e1914;
   border: 3px solid #ff908b;
-  flex-direction: column;
   border-radius: 0.5rem;
   padding: 2rem;
   margin: 2rem;
-}
-
-.page-content {
-  display: flex;
-  justify-content: center;
 }
 
 .heading-icon {
@@ -76,11 +71,6 @@ button {
   border: 3px solid #ec1703;
   padding: 2rem;
   margin: 2rem;
-}
-
-.content-heading-container {
-  display: flex;
-  justify-content: center;
 }
 
 .content-heading {
@@ -101,15 +91,12 @@ button {
 }
 
 .burger-container {
-  display: flex;
   justify-content: space-around;
 }
 
 .burger-svg-container,
 .burger-info-container {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0rem 1rem 0rem 1rem;
   padding: 1rem;
 }
@@ -140,7 +127,6 @@ button {
 }
 
 .burgers-container {
-  display: flex;
   flex-direction: column;
 }
 
@@ -150,11 +136,7 @@ button {
   margin-top: 1rem;
 }
 
-.burgers-col-container {
-  display: flex;
-}
-
-li {
+.burger-ingredients {
   font-size: 1.3rem;
   font-family: 'Staatliches', cursive;
   margin: 0.2rem;

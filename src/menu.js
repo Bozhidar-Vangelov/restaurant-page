@@ -19,7 +19,7 @@ export const createMenuPage = (pageContainer) => {
 
   const pageContent = createElement({
     type: 'div',
-    attributes: { class: 'page-content' },
+    attributes: { class: 'flex justify-center' },
     appendTo: page,
   });
 
@@ -33,25 +33,25 @@ export const createMenuPage = (pageContainer) => {
 const createBurgers = (contentContainer, burgers) => {
   const burgersContainer = createElement({
     type: 'div',
-    attributes: { class: 'burgers-container' },
+    attributes: { class: 'burgers-container flex' },
     appendTo: contentContainer,
   });
 
   const firstColContainer = createElement({
     type: 'div',
-    attributes: { class: 'burgers-col-container' },
+    attributes: { class: 'flex' },
     appendTo: burgersContainer,
   });
 
   const secondColContainer = createElement({
     type: 'div',
-    attributes: { class: 'burgers-col-container' },
+    attributes: { class: 'flex' },
     appendTo: burgersContainer,
   });
 
   const thirdColContainer = createElement({
     type: 'div',
-    attributes: { class: 'burgers-col-container' },
+    attributes: { class: 'flex' },
     appendTo: burgersContainer,
   });
 
@@ -79,13 +79,13 @@ const createBurgers = (contentContainer, burgers) => {
 
     const burgerContainer = createElement({
       type: 'div',
-      attributes: { class: 'burger-container' },
+      attributes: { class: 'burger-container flex' },
       appendTo: targetedContainer,
     });
 
     const burgerSvgContainer = createElement({
       type: 'div',
-      attributes: { class: 'burger-svg-container' },
+      attributes: { class: 'burger-svg-container flex justify-center' },
       appendTo: burgerContainer,
     });
 
@@ -101,7 +101,7 @@ const createBurgers = (contentContainer, burgers) => {
 
     const burgerInfoContainer = createElement({
       type: 'div',
-      attributes: { class: 'burger-info-container' },
+      attributes: { class: 'burger-info-container flex justify-center' },
       appendTo: burgerContainer,
     });
 
@@ -122,6 +122,7 @@ const createBurgers = (contentContainer, burgers) => {
       createElement({
         type: 'li',
         props: { textContent: ingredient },
+        attributes: { class: 'burger-ingredients' },
         appendTo: burgerList,
       })
     );

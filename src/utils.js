@@ -45,7 +45,7 @@ export const createContainers = (pageContent, containersData) => {
 
     const contentHeadingContainer = createElement({
       type: 'div',
-      attributes: { class: 'content-heading-container' },
+      attributes: { class: 'flex justify-center' },
       appendTo: contentContainer,
     });
 
