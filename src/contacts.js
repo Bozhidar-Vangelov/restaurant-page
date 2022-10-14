@@ -19,7 +19,7 @@ export const createContactsPage = (pageContainer) => {
 
   const pageContent = createElement({
     type: 'div',
-    attributes: { class: 'flex justify-center' },
+    attributes: { class: 'page-content flex justify-center' },
     appendTo: page,
   });
 

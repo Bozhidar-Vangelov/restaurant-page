@@ -94,9 +94,13 @@ button {
   justify-content: space-around;
 }
 
-.burger-svg-container,
 .burger-info-container {
   flex-direction: column;
+  justify-content: center;
+}
+
+.burger-svg-container,
+.burger-info-container {
   margin: 0rem 1rem 0rem 1rem;
   padding: 1rem;
 }
@@ -114,7 +118,7 @@ button {
 
 .burger-ingredients-container {
   list-style-type: none;
-  text-align: start;
+  text-align: center;
   font-size: 1.3rem;
   padding: 0;
 }
@@ -123,11 +127,11 @@ button {
   margin: 2rem 1rem 2rem 1rem;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(#2e1111, #5e1914);
-  width: 33%;
+  width: 30%;
 }
 
 .burgers-container {
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .map-img {
@@ -140,4 +144,80 @@ button {
   font-size: 1.3rem;
   font-family: 'Staatliches', cursive;
   margin: 0.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-img {
+    max-width: 9rem;
+  }
+
+  .content-container {
+    min-width: 35%;
+  }
+
+  .burger-container {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .content-img {
+    max-width: 6rem;
+  }
+
+  .content-container {
+    min-width: 30%;
+  }
+
+  .content,
+  .contact {
+    font-size: 1rem;
+  }
+
+  .heading-icon {
+    font-size: 2rem;
+  }
+
+  .content-heading {
+    font-size: 1.4rem;
+  }
+
+  .burger-container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content-img {
+    max-width: 4rem;
+  }
+
+  .about-us {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-content {
+    display: block;
+    margin: 0;
+  }
+
+  .burger-container {
+    width: 95%;
+  }
+
+  .burger-svg {
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+
+  .burger-name {
+    font-size: 1rem;
+  }
+
+  .content-container {
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+  }
 }

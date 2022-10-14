@@ -19,7 +19,7 @@ export const createMenuPage = (pageContainer) => {
 
   const pageContent = createElement({
     type: 'div',
-    attributes: { class: 'flex justify-center' },
+    attributes: { class: 'page-content flex justify-center' },
     appendTo: page,
   });
 
@@ -33,54 +33,15 @@ export const createMenuPage = (pageContainer) => {
 const createBurgers = (contentContainer, burgers) => {
   const burgersContainer = createElement({
     type: 'div',
-    attributes: { class: 'burgers-container flex' },
+    attributes: { class: 'burgers-container flex justify-center' },
     appendTo: contentContainer,
   });
 
-  const firstColContainer = createElement({
-    type: 'div',
-    attributes: { class: 'flex' },
-    appendTo: burgersContainer,
-  });
-
-  const secondColContainer = createElement({
-    type: 'div',
-    attributes: { class: 'flex' },
-    appendTo: burgersContainer,
-  });
-
-  const thirdColContainer = createElement({
-    type: 'div',
-    attributes: { class: 'flex' },
-    appendTo: burgersContainer,
-  });
-
-  let count = 0;
-
   burgers.forEach((burger) => {
-    let targetedContainer = undefined;
-
-    switch (count) {
-      case 0:
-        targetedContainer = firstColContainer;
-        break;
-      case 1:
-        targetedContainer = secondColContainer;
-        break;
-      case 2:
-        targetedContainer = thirdColContainer;
-    }
-
-    if (count === 2) {
-      count = 0;
-    } else {
-      count++;
-    }
-
     const burgerContainer = createElement({
       type: 'div',
-      attributes: { class: 'burger-container flex' },
-      appendTo: targetedContainer,
+      attributes: { class: 'burger-container' },
+      appendTo: burgersContainer,
     });
 
     const burgerSvgContainer = createElement({
