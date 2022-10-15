@@ -40,7 +40,7 @@ export const contactsPageContainersData = [
 export const burgers = [
   {
     name: 'Virgo Burger',
-    src: '/src/images/virgo-burger.png',
+    src: '/src/assets/virgo-burger.png',
     ingredients: [
       'Brioche bun with sesame',
       'Black angus beef',
@@ -51,7 +51,7 @@ export const burgers = [
   },
   {
     name: 'Miss Classy',
-    src: '/src/images/miss-classy.png',
+    src: '/src/assets/miss-classy.png',
     ingredients: [
       'Brioche bun with sesame',
       'Black angus beef',
@@ -63,7 +63,7 @@ export const burgers = [
   },
   {
     name: 'Electric Shock',
-    src: '/src/images/electric-shock.png',
+    src: '/src/assets/electric-shock.png',
     ingredients: [
       'Wholegrain brioche bun',
       'Pulled beef',
@@ -74,7 +74,7 @@ export const burgers = [
   },
   {
     name: 'Double Trouble',
-    src: '/src/images/double-trouble.png',
+    src: '/src/assets/double-trouble.png',
     ingredients: [
       'Brioche bun with linseed',
       '2 Beef patties',
@@ -84,7 +84,7 @@ export const burgers = [
   },
   {
     name: 'Chicky chick',
-    src: '/src/images/chicky-chick.png',
+    src: '/src/assets/chicky-chick.png',
     ingredients: [
       'Wholegrain bun',
       'Chicken fillet',
@@ -96,7 +96,7 @@ export const burgers = [
   },
   {
     name: 'Green piece',
-    src: '/src/images/green-piece.png',
+    src: '/src/assets/green-piece.png',
     ingredients: [
       'Vegan bun with sesame',
       'Beyond Meat',
@@ -108,7 +108,7 @@ export const burgers = [
   },
   {
     name: 'Tart UFO',
-    src: '/src/images/tart-ufo.png',
+    src: '/src/assets/tart-ufo.png',
     ingredients: [
       'Brioche bun with sesame',
       'Mushroom patty with truffles',
@@ -120,7 +120,7 @@ export const burgers = [
   },
   {
     name: 'Mr Monster',
-    src: '/src/images/mr-monster.png',
+    src: '/src/assets/mr-monster.png',
     ingredients: [
       'Brioche bun',
       'Triple Black Angus',
@@ -132,7 +132,7 @@ export const burgers = [
   },
   {
     name: 'Toon A',
-    src: '/src/images/toon-a.png',
+    src: '/src/assets/toon-a.png',
     ingredients: [
       'Wholegrain bun',
       'Tuna patty',

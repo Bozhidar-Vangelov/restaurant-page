@@ -15,7 +15,7 @@ export const createHeader = (contentDiv) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'logo', src: '../src/images/logo.png' },
+    attributes: { class: 'logo', src: '../src/assets/logo.png' },
     appendTo: logoContainer,
   });
 
