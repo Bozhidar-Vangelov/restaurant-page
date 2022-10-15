@@ -15,7 +15,7 @@ const buttonsContainer = createElement({
   type: 'div',
   attributes: {
     class: 'buttons-container flex justify-center',
-    src: '../src/images/logo.png',
+    src: '/src/images/logo.png',
   },
   appendTo: headerElement,
 });
