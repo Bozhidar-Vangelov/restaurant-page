@@ -72,7 +72,7 @@ const createAboutUs = (aboutUsContainer) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'content-img', src: '../src/images/home-burger.png' },
+    attributes: { class: 'content-img', src: '/src/images/home-burger.png' },
     appendTo: aboutUsContainer,
   });
 
@@ -80,7 +80,7 @@ const createAboutUs = (aboutUsContainer) => {
     type: 'img',
     attributes: {
       class: 'content-img',
-      src: '../src/images/home-french-fries.png',
+      src: '/src/images/home-french-fries.png',
     },
     appendTo: aboutUsContainer,
   });
