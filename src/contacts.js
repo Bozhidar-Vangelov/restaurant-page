@@ -34,7 +34,7 @@ export const createContactsPage = (pageContainer) => {
     type: 'img',
     attributes: {
       class: 'map-img',
-      src: '../src/images/map.png',
+      src: '/src/assets/map.png',
     },
     appendTo: mapContainer,
   });
