@@ -1,5 +1,6 @@
+import { map } from './assets';
+import { contactsData, contactsPageContainersData } from './data.js';
 import { createContainers, createElement } from './utils.js';
-import { contactsPageContainersData, contactsData } from './data.js';
 
 export const createContactsPage = (pageContainer) => {
   const headingText = 'Contacts';
@@ -34,7 +35,7 @@ export const createContactsPage = (pageContainer) => {
     type: 'img',
     attributes: {
       class: 'map-img',
-      src: '/src/assets/map.png',
+      src: map,
     },
     appendTo: mapContainer,
   });

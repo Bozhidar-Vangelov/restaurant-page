@@ -1,5 +1,5 @@
+import { burgers, menuContainersData } from './data.js';
 import { createContainers, createElement } from './utils.js';
-import { menuContainersData, burgers } from './data.js';
 
 export const createMenuPage = (pageContainer) => {
   const headingText = 'Menu';

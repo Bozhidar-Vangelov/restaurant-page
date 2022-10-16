@@ -1,3 +1,4 @@
+import { logo } from './assets';
 import { createElement } from './utils.js';
 
 export const createHeader = (contentDiv) => {
@@ -15,7 +16,7 @@ export const createHeader = (contentDiv) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'logo', src: '../src/assets/logo.png' },
+    attributes: { class: 'logo', src: logo },
     appendTo: logoContainer,
   });
 

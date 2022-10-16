@@ -1,5 +1,6 @@
-import { createElement, createContainers } from './utils.js';
-import { homeContainersData, daysOfWeek } from './data.js';
+import { homeBurger, homeFrenchFries } from './assets';
+import { daysOfWeek, homeContainersData } from './data.js';
+import { createContainers, createElement } from './utils.js';
 
 export const createHomePage = (pageContainer) => {
   const headingText = 'A magic factory for healthy food';
@@ -72,7 +73,7 @@ const createAboutUs = (aboutUsContainer) => {
 
   createElement({
     type: 'img',
-    attributes: { class: 'content-img', src: '/src/assets/home-burger.png' },
+    attributes: { class: 'content-img', src: homeBurger },
     appendTo: aboutUsContainer,
   });
 
@@ -80,7 +81,7 @@ const createAboutUs = (aboutUsContainer) => {
     type: 'img',
     attributes: {
       class: 'content-img',
-      src: '/src/assets/home-french-fries.png',
+      src: homeFrenchFries,
     },
     appendTo: aboutUsContainer,
   });

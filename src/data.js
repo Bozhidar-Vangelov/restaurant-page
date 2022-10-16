@@ -1,3 +1,5 @@
+import * as burgerImages from './assets';
+
 export const daysOfWeek = [
   'Monday',
   'Tuesday',
@@ -40,7 +42,7 @@ export const contactsPageContainersData = [
 export const burgers = [
   {
     name: 'Virgo Burger',
-    src: '/src/assets/virgo-burger.png',
+    src: burgerImages.virgoBurger,
     ingredients: [
       'Brioche bun with sesame',
       'Black angus beef',
@@ -51,7 +53,7 @@ export const burgers = [
   },
   {
     name: 'Miss Classy',
-    src: '/src/assets/miss-classy.png',
+    src: burgerImages.missClassy,
     ingredients: [
       'Brioche bun with sesame',
       'Black angus beef',
@@ -63,7 +65,7 @@ export const burgers = [
   },
   {
     name: 'Electric Shock',
-    src: '/src/assets/electric-shock.png',
+    src: burgerImages.electricShock,
     ingredients: [
       'Wholegrain brioche bun',
       'Pulled beef',
@@ -74,7 +76,7 @@ export const burgers = [
   },
   {
     name: 'Double Trouble',
-    src: '/src/assets/double-trouble.png',
+    src: burgerImages.doubleTrouble,
     ingredients: [
       'Brioche bun with linseed',
       '2 Beef patties',
@@ -84,7 +86,7 @@ export const burgers = [
   },
   {
     name: 'Chicky chick',
-    src: '/src/assets/chicky-chick.png',
+    src: burgerImages.chickyChick,
     ingredients: [
       'Wholegrain bun',
       'Chicken fillet',
@@ -96,7 +98,7 @@ export const burgers = [
   },
   {
     name: 'Green piece',
-    src: '/src/assets/green-piece.png',
+    src: burgerImages.greenPiece,
     ingredients: [
       'Vegan bun with sesame',
       'Beyond Meat',
@@ -108,7 +110,7 @@ export const burgers = [
   },
   {
     name: 'Tart UFO',
-    src: '/src/assets/tart-ufo.png',
+    src: burgerImages.tartUfo,
     ingredients: [
       'Brioche bun with sesame',
       'Mushroom patty with truffles',
@@ -120,7 +122,7 @@ export const burgers = [
   },
   {
     name: 'Mr Monster',
-    src: '/src/assets/mr-monster.png',
+    src: burgerImages.mrMonster,
     ingredients: [
       'Brioche bun',
       'Triple Black Angus',
@@ -132,7 +134,7 @@ export const burgers = [
   },
   {
     name: 'Toon A',
-    src: '/src/assets/toon-a.png',
+    src: burgerImages.toonA,
     ingredients: [
       'Wholegrain bun',
       'Tuna patty',
@@ -148,5 +150,5 @@ export const contactsData = {
   fax: '111-222-333',
   street: '5555 Sandwich way',
   city: 'Burgtown',
-  'zip code': '999'
+  'zip code': '999',
 };

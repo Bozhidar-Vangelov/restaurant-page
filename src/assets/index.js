@@ -8,6 +8,9 @@ import logo from './logo.png';
 import map from './map.png';
 import missClassy from './miss-classy.png';
 import mrMonster from './mr-monster.png';
+import tartUfo from './tart-ufo.png';
+import toonA from './toon-a.png';
+import virgoBurger from './virgo-burger.png';
 
 export {
   chickyChick,
@@ -20,4 +23,7 @@ export {
   map,
   missClassy,
   mrMonster,
+  tartUfo,
+  toonA,
+  virgoBurger,
 };

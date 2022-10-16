@@ -1,10 +1,10 @@
+import './assets';
+import './styles.css';
 import { createContactsPage } from './contacts.js';
+import { createHeader } from './header.js';
 import { createHomePage } from './home.js';
 import { createMenuPage } from './menu.js';
-import './styles.css';
 import { createElement } from './utils.js';
-import { createHeader } from './header.js';
-import './assets';
 
 const navButtonsText = ['Home', 'Menu', 'Contacts'];
 
@@ -16,7 +16,6 @@ const buttonsContainer = createElement({
   type: 'div',
   attributes: {
     class: 'buttons-container flex justify-center',
-    src: '/src/assets/logo.png',
   },
   appendTo: headerElement,
 });
