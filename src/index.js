@@ -4,6 +4,7 @@ import { createMenuPage } from './menu.js';
 import './styles.css';
 import { createElement } from './utils.js';
 import { createHeader } from './header.js';
+import './assets';
 
 const navButtonsText = ['Home', 'Menu', 'Contacts'];
 
